@@ -4,15 +4,11 @@
     $player_hp = 50;
     
     // プレイヤー名
-    $user_name = "ユーザー"
-    
+    $user_name = "ユーザー";
     //　敵の攻撃
     $attack_enemy = rand(1,9);
-    
-    
     // プレイヤーの攻撃
     $attack_player = rand(1,20);
-    
 ?>
 
 <!DOCTYPE HTML>
