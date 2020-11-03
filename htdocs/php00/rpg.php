@@ -1,14 +1,14 @@
 <?php
         // hp
-    $enemy_hp =20;
-    $player_hp = 50;
+    $enemy_hp =1500;
+    $player_hp = 960;
     
     // プレイヤー名
     $user_name = "ユーザー";
     //　敵の攻撃
     $attack_enemy = rand(1,9);
     // プレイヤーの攻撃
-    $attack_player = rand(1,20);
+    $attack_player = rand(500,999);
 ?>
 
 <!DOCTYPE HTML>
@@ -26,7 +26,7 @@
                    <p class="name"><?php echo $user_name; ?></p>
                    <p class="hp">HP: <span id="player_hp"><?php echo $player_hp; ?></span></p>
                    <p class="mp">MP: 0</p>
-                   <p class="lv">Lv: 30</p>
+                   <p class="lv">Lv: 3</p>
                </li>
            </ul>
        </div>
