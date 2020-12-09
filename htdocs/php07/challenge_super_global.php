@@ -4,8 +4,8 @@
 $name = '';
 $gender = '';
 
-if (isset($_POST['name'])===true) {
-   $name =  htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
+if (isset($_POST['my_name'])===true) {
+   $name =  htmlspecialchars($_POST['my_name'], ENT_QUOTES, 'UTF-8');
 }
 ?>
 <?php
@@ -24,7 +24,7 @@ if (isset($_POST['gender']) === TRUE) {//POSTで'ジェンダー'を返す
 <body>
 <?php
    //名前
-   if(isset($_POST['name'])===true)
+   if(isset($_POST['my_name'])===true)
    {?>
    <p>ようこそ<?php print $name;?>さん</p>
    <?php } ?>
@@ -34,10 +34,10 @@ if (isset($_POST['gender']) === TRUE) {//POSTで'ジェンダー'を返す
    <p> ここに選択した性別を表示：<?php print $gender; ?></p> 
 <?php } ?>
 <form method='post'>
-お名前： <input type="text" name='name'> <br>
+お名前： <input id="my_name" type="text" name='my_name' value=""> <br>　
 性別：<input type="radio" name='gender' value='man' <?php if ($gender === 'man'){ print 'checked'; }?>>男
 <input type="radio" name='gender' value='woman'<?php if ($gender === 'woman'){ print 'checked'; }?>>女 <br>
-
+<input type="checkbox" name="mail" value="OK">お知らせメールを受け取る<br>
 <input type="submit" name="button" value="送信"><br>
 </form>
 </body>
