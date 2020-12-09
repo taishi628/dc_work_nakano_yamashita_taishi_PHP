@@ -23,6 +23,7 @@ if (isset($_POST['gender']) === TRUE) {//POSTで'ジェンダー'を返す
 </head>
 <body>
 <?php
+   //名前
    if(isset($_POST['name'])===true)
    {?>
    <p>ようこそ<?php print $name;?>さん</p>
