@@ -38,13 +38,18 @@ $mail = '';
    <p> ここに選択した性別を表示：<?php print $gender; ?></p> 
 <?php } ?>
 
+<?php
+   //メール
+   if(isset($_POST['mail'])===true){?>
+   <p>お知らせメールを受け取る：<?php print $mail; ?></p>
+<?php } ?>
 
 <form method='post'>
-お名前： <input id="my_name" type="text" name='my_name' value=""> <br>　
-性別：<input type="radio" name='gender' value='man' <?php if ($gender === 'man'){ print 'checked'; }?>>男
-<input type="radio" name='gender' value='woman'<?php if ($gender === 'woman'){ print 'checked'; }?>>女 <br>
-<input type="checkbox" name="mail" value="OK">お知らせメールを受け取る<br>
-<input type="submit" name="button" value="送信"><br>
+<label>お名前： <input id="my_name" type="text" name='my_name' value="<?php print  htmlspecialchars($name, ENT_QUOTES, "UTF-8"); ?>"></label><br>
+<label>性別：<input type="radio" name='gender' value='man' <?php if ($gender === 'man'){ print 'checked'; }?>>男
+<input type="radio" name='gender' value='woman'<?php if ($gender === 'woman'){ print 'checked'; }?>>女</label><br>
+<label>お知らせメールを受け取る：<input type="checkbox" name="mail" value="OK"<?php if ($mail === 'OK'){ print 'checked'; }?>></label><br>
+<label><input type="submit" name="button" value="送信"></label><br>
 </form>
 </body>
 </html>
