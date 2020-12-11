@@ -25,10 +25,10 @@ if (isset($_POST['name']) === TRUE){
    <h1>名前がいきわたるやつ</h1>
    
 <?php 
-   if (isset($_POST['name']) === true) {?>
+   if(empty($_POST['name'])) {?>
+   <p>名前を入力してください</p>
+<?php } else{ ?>
     <p>ようこそ<?php print $name;?>さん</p>
-<?php } else(isset($_POST['name']) === false) { ?>
-    <p>名前を入力してください</p>
 <?php } ?>
    <form method="post">
     <label>お名前： <input id="name" type="text" name='name' value="<?php print  htmlspecialchars($name, ENT_QUOTES, "UTF-8");?>"></label><br>
