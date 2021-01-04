@@ -7,15 +7,17 @@
 <body>
 <?php
     for($i = 1; $i <= 100; $i++){
-        if (($i%3 === 0) && ($i%5 === 0)){//３かつ５の倍数
-        <p>FizzBuzz</p>
-    }?>
-    <?php } elseif($i%3 === 0 ) {//それ以外で３の倍数
-      <p>Fizz</p>
-    <?php }elseif ($i%5 === 0){//それ以外で５の倍数
-     <p>Buzz</p>
-    <?php } else {
-        <p><?php echo $i ?></p>
-<?php }?>
+        if (($i%3 === 0) && ($i%5 === 0)){
+        
+    echo "FizzBuzz";
+    } else if($i%3 === 0 ){
+         echo "Fizz";
+    } else if ($i%5 === 0){
+     echo "Buzz";
+    } else {
+         echo $i;
+}
+ echo PHP_EOL;
+}?>
 </body>
 </html>
